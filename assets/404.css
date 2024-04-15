@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Muli", sans-serif;
+    background: #1d1934;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.worklet-canvas {
+    --fluid-pattern-bg-color: #101010;
+    --fluid-pattern-color-1: #ffd53d;
+    --fluid-pattern-color-2: #f0f1ff;
+    --fluid-pattern-color-3: #f25c54;
+    --fluid-pattern-color-4: #48cb8a;
+    --fluid-pattern-color-5: #91c8e4;
+    --fluid-pattern-color-6: #ffc0cb;
+    --fluid-pattern-color-7: #2c74b3;
+    --fluid-pattern-color-8: #ff8989;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: paint(fluidPattern);
+}
+
+.glass-Box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5rem;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(1rem) saturate(200%);
+    backdrop-filter: blur(1rem) saturate(200%);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    max-width: 26rem;
+    text-align: center;
+}
+.glass-Box h1 {
+    font-size: 10rem;
+    text-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.glass-Box p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    line-height: 2.75rem;
+    background: rgba(20, 20, 20, 0.7);
+    color: #fff;
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+}
