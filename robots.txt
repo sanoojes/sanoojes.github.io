@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Sitemap: sanooj.is-a.dev/sitemap.xml
+Allow: /
