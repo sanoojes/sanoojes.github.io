@@ -1312,7 +1312,7 @@ input:focus {
         flex: none !important   ;
     }
     * {
-        cursor: default;
+        cursor: none;
         /* height: fit-content ; */
     }
     .container {
@@ -1335,6 +1335,7 @@ input:focus {
 
     .cursor {
         display: none;
+        visibility: hidden;
     }
     .popup-wrapper {
         padding: var(--padding-cards) var(--padding-container);
