@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateThemeOnHtmlEl(theme) {
         add_discord_card.forEach((element) => {
             element.innerHTML = `<img
-            src="https://lanyard.cnrad.dev/api/821653196161679371?theme=${theme}&bg=00000000&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true"/>`;
+            src="https://lanyard.cnrad.dev/api/821653196161679371?theme=${theme}&bg=00000000&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true" alt="User Status Discord"/>`;
         });
         add_git_card.innerHTML = `<img
         src="https://github-readme-stats.vercel.app/api?username=sanoojes&show_icons=true&theme=${theme}&hide_border=true&disable_animations=true&bg_color=00000000"

@@ -64,8 +64,8 @@
     --hover-bg-color: hsl(0, 27%, 85%);
     --card-bg-color: hsl(0, 40%, 90%);
     --cursor-color: rgb(10, 10, 10, 0.4);
-    --primary-font-color: rgb(31, 31, 31);
-    --secondary-font-color: rgb(138, 148, 158);
+    --primary-font-color: rgb(10, 10, 10);
+    --secondary-font-color: rgb(71, 71, 71);
     --border-color: #00000033;
     --button-color: #e3cbcb;
     --button-hover-color: var(--hover-bg-color);
@@ -90,7 +90,7 @@
     --card-bg-color: #28292c;
     --cursor-color: rgba(255, 255, 255, 0.5);
     --primary-font-color: #cccccc;
-    --secondary-font-color: #666666;
+    --secondary-font-color: rgb(113, 113, 113);
     --border-color: rgba(216, 219, 224, 0.1);
     --button-color: #28292c;
     --button-hover-color: #4d4d4d90;
