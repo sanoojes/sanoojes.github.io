@@ -1319,6 +1319,13 @@ input:focus {
         height: fit-content;
         flex-direction: column;
     }
+
+    .card-5 {
+        flex: none;
+    }
+    .card-4 {
+        flex: 1.5;
+    }
     .content-row {
         flex-direction: column;
     }
