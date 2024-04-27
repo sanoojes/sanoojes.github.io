@@ -1311,10 +1311,6 @@ input:focus {
     .card-1 {
         flex: none !important   ;
     }
-    * {
-        cursor: none;
-        /* height: fit-content ; */
-    }
     .container {
         height: fit-content;
         flex-direction: column;
