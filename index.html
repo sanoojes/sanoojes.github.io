@@ -1,979 +1,892 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sanooj Es - Full Stack Developer from Kerala</title>
-        <link rel="icon" type="image/png" href="assets/images/favicon-96.png" />
-        <link
-            type="image/png"
-            sizes="16×16"
-            rel="icon"
-            href="assets/images/favicon-16.png"
-        />
-        <link
-            type="image/png"
-            sizes="32×32"
-            rel="icon"
-            href="assets/images/favicon-32.png"
-        />
-        <link
-            type="image/png"
-            sizes="96×96"
-            rel="icon"
-            href="assets/images/favicon-96.png"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanooj Es - Full Stack Developer from Kerala</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon-96.png" />
+    <link
+      type="image/png"
+      sizes="16×16"
+      rel="icon"
+      href="assets/images/favicon-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32×32"
+      rel="icon"
+      href="assets/images/favicon-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96×96"
+      rel="icon"
+      href="assets/images/favicon-96.png"
+    />
+    <meta
+      name="keywords"
+      content="sanooj, sanoojes , sanooj es, portfolio,developer portfolio"
+    />
+    <meta
+      name="description"
+      content="Discover About Sanooj, a skilled Full-stack Developer from Kerala specializing in React, Java, Python, and more. Explore projects and connect with me."
+    />
+    <meta
+      name="keywords"
+      content="sanooj, sanoojes, sanooj es,sanoojes portfolio"
+    />
+    <meta name="author" content="Sanooj Es" />
 
-        <meta
-            name="description"
-            content="Discover About Sanooj, a skilled Full-stack Developer from Kerala specializing in React, Java, Python, and more. Explore projects and connect with me."
-        />
-        <meta
-            name="keywords"
-            content="sanooj, sanoojes, sanooj es,sanoojes portfolio"
-        />
-        <meta name="author" content="Sanooj Es" />
+    <script
+      rel="preconnect"
+      src="https://kit.fontawesome.com/4cab42481f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="canonical" href="https://sanooj.is-a.dev/" />
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+          document.querySelector("#loader").style.visibility = "visible";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+        }
+      };
+    </script>
+    <style>
+      .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: hsl(0, 0%, 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        overflow: hidden;
+        transition: visibility 1s ease-in-out;
+      }
+      .loader {
+        --path-color: rgba(255, 255, 255, 0.4);
+        --dot: #5628ee;
+        --duration: 3s;
+        width: 44px;
+        height: 44px;
+        position: relative;
+      }
 
-        <script
-            rel="preconnect"
-            src="https://kit.fontawesome.com/4cab42481f.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="assets/style.css" />
-        <link rel="canonical" href="https://sanooj.is-a.dev/" />
-        <script>
-            document.onreadystatechange = function () {
-                if (document.readyState !== "complete") {
-                    document.querySelector("body").style.visibility = "hidden";
-                    document.querySelector("#loader").style.visibility =
-                        "visible";
-                } else {
-                    document.querySelector("#loader").style.display = "none";
-                    document.querySelector("body").style.visibility = "visible";
-                }
-            };
-        </script>
-        <style>
-            .loader-wrapper {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: hsl(0, 0%, 10%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 100;
-                overflow: hidden;
-                transition: visibility 1s ease-in-out;
-            }
-            .loader {
-                --path-color: rgba(255, 255, 255, 0.4);
-                --dot: #5628ee;
-                --duration: 3s;
-                width: 44px;
-                height: 44px;
-                position: relative;
-            }
+      .loader:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        background: var(--dot);
+        top: 37px;
+        left: 19px;
+        transform: translate(-18px, -18px);
+        animation: dotRect var(--duration)
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
 
-            .loader:before {
-                content: "";
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                position: absolute;
-                display: block;
-                background: var(--dot);
-                top: 37px;
-                left: 19px;
-                transform: translate(-18px, -18px);
-                animation: dotRect var(--duration)
-                    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            }
+      .loader svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
 
-            .loader svg {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
+      .loader svg rect,
+      .loader svg polygon,
+      .loader svg circle {
+        fill: none;
+        stroke: var(--path-color);
+        stroke-width: 10px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
 
-            .loader svg rect,
-            .loader svg polygon,
-            .loader svg circle {
-                fill: none;
-                stroke: var(--path-color);
-                stroke-width: 10px;
-                stroke-linejoin: round;
-                stroke-linecap: round;
-            }
+      .loader svg polygon {
+        stroke-dasharray: 145 76 145 76;
+        stroke-dashoffset: 0;
+        animation: pathTriangle var(--duration)
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
 
-            .loader svg polygon {
-                stroke-dasharray: 145 76 145 76;
-                stroke-dashoffset: 0;
-                animation: pathTriangle var(--duration)
-                    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            }
+      .loader svg rect {
+        stroke-dasharray: 192 64 192 64;
+        stroke-dashoffset: 0;
+        animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
 
-            .loader svg rect {
-                stroke-dasharray: 192 64 192 64;
-                stroke-dashoffset: 0;
-                animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86)
-                    infinite;
-            }
+      .loader svg circle {
+        stroke-dasharray: 150 50 150 50;
+        stroke-dashoffset: 75;
+        animation: pathCircle var(--duration)
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
 
-            .loader svg circle {
-                stroke-dasharray: 150 50 150 50;
-                stroke-dashoffset: 75;
-                animation: pathCircle var(--duration)
-                    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            }
+      .loader.triangle {
+        width: 48px;
+      }
 
-            .loader.triangle {
-                width: 48px;
-            }
+      .loader.triangle:before {
+        left: 21px;
+        transform: translate(-10px, -18px);
+        animation: dotTriangle var(--duration)
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
 
-            .loader.triangle:before {
-                left: 21px;
-                transform: translate(-10px, -18px);
-                animation: dotTriangle var(--duration)
-                    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            }
+      @keyframes pathTriangle {
+        33% {
+          stroke-dashoffset: 74;
+        }
 
-            @keyframes pathTriangle {
-                33% {
-                    stroke-dashoffset: 74;
-                }
+        66% {
+          stroke-dashoffset: 147;
+        }
 
-                66% {
-                    stroke-dashoffset: 147;
-                }
+        100% {
+          stroke-dashoffset: 221;
+        }
+      }
 
-                100% {
-                    stroke-dashoffset: 221;
-                }
-            }
+      @keyframes dotTriangle {
+        33% {
+          transform: translate(0, 0);
+        }
 
-            @keyframes dotTriangle {
-                33% {
-                    transform: translate(0, 0);
-                }
+        66% {
+          transform: translate(10px, -18px);
+        }
 
-                66% {
-                    transform: translate(10px, -18px);
-                }
+        100% {
+          transform: translate(-10px, -18px);
+        }
+      }
 
-                100% {
-                    transform: translate(-10px, -18px);
-                }
-            }
+      @keyframes pathRect {
+        25% {
+          stroke-dashoffset: 64;
+        }
 
-            @keyframes pathRect {
-                25% {
-                    stroke-dashoffset: 64;
-                }
+        50% {
+          stroke-dashoffset: 128;
+        }
 
-                50% {
-                    stroke-dashoffset: 128;
-                }
+        75% {
+          stroke-dashoffset: 192;
+        }
 
-                75% {
-                    stroke-dashoffset: 192;
-                }
+        100% {
+          stroke-dashoffset: 256;
+        }
+      }
 
-                100% {
-                    stroke-dashoffset: 256;
-                }
-            }
+      @keyframes dotRect {
+        25% {
+          transform: translate(0, 0);
+        }
 
-            @keyframes dotRect {
-                25% {
-                    transform: translate(0, 0);
-                }
+        50% {
+          transform: translate(18px, -18px);
+        }
 
-                50% {
-                    transform: translate(18px, -18px);
-                }
+        75% {
+          transform: translate(0, -36px);
+        }
 
-                75% {
-                    transform: translate(0, -36px);
-                }
+        100% {
+          transform: translate(-18px, -18px);
+        }
+      }
 
-                100% {
-                    transform: translate(-18px, -18px);
-                }
-            }
+      @keyframes pathCircle {
+        25% {
+          stroke-dashoffset: 125;
+        }
 
-            @keyframes pathCircle {
-                25% {
-                    stroke-dashoffset: 125;
-                }
+        50% {
+          stroke-dashoffset: 175;
+        }
 
-                50% {
-                    stroke-dashoffset: 175;
-                }
+        75% {
+          stroke-dashoffset: 225;
+        }
 
-                75% {
-                    stroke-dashoffset: 225;
-                }
+        100% {
+          stroke-dashoffset: 275;
+        }
+      }
 
-                100% {
-                    stroke-dashoffset: 275;
-                }
-            }
+      .loader {
+        display: inline-block;
+        margin: 0 16px;
+      }
+      /* Cursor */
+      .cursor {
+        position: fixed;
+        width: var(--cursor-size, 1rem);
+        height: var(--cursor-size, 1rem);
+        margin-left: calc(var(--cursor-size, 50px) / -2);
+        margin-top: calc(var(--cursor-size, 50px) / -2);
+        border-radius: 50%;
+        background-color: var(--cursor-color);
+        z-index: 1000;
+        pointer-events: none;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-wrapper" id="loader">
+      <div class="loader" aria-busy="true">
+        <svg viewBox="0 0 80 80">
+          <circle id="test" cx="40" cy="40" r="32"></circle>
+        </svg>
+      </div>
 
-            .loader {
-                display: inline-block;
-                margin: 0 16px;
-            }
-            /* Cursor */
-            .cursor {
-                position: fixed;
-                width: var(--cursor-size, 1rem);
-                height: var(--cursor-size, 1rem);
-                margin-left: calc(var(--cursor-size, 50px) / -2);
-                margin-top: calc(var(--cursor-size, 50px) / -2);
-                border-radius: 50%;
-                background-color: var(--cursor-color);
-                z-index: 1000;
-                pointer-events: none;
-                display: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="loader-wrapper" id="loader">
-            <div class="loader" aria-busy="true">
-                <svg viewBox="0 0 80 80">
-                    <circle id="test" cx="40" cy="40" r="32"></circle>
-                </svg>
+      <div aria-busy="true" class="loader triangle">
+        <svg viewBox="0 0 86 80">
+          <polygon points="43 8 79 72 7 72"></polygon>
+        </svg>
+      </div>
+
+      <div aria-busy="true" class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+        </svg>
+      </div>
+    </div>
+    <div aria-busy="true" class="cursor" style="display: block"></div>
+    <div class="container">
+      <section class="main-wrapper-1">
+        <section class="content-row content-row-1">
+          <div class="card card-1">
+            <div class="main-card">
+              <h1 class="main">Hi, I'm Sanooj!</h1>
+              <p class="desc">
+                Full-stack developer from Kerala with experience in web (React,
+                HTML, CSS). Comfortable with backend (Java, Python, JavaScript)
+                and databases (MySQL, MongoDB). Utilizes version control
+                (GitHub, GitLab).
+              </p>
             </div>
-
-            <div aria-busy="true" class="loader triangle">
-                <svg viewBox="0 0 86 80">
-                    <polygon points="43 8 79 72 7 72"></polygon>
-                </svg>
+          </div>
+          <div class="card card-2">
+            <img src="assets/images/1.webp" alt="Project Thumbnail" />
+          </div>
+          <div class="card card-3">
+            <img src="assets/images/2.webp" alt="Project Thumbnail" />
+          </div>
+        </section>
+        <section class="content-row content-row-2">
+          <div class="card card-4">
+            <img src="assets/images/3.webp" alt="Project Thumbnail" />
+          </div>
+          <div class="card card-5">
+            <div class="content">
+              <p class="main">About</p>
+              <p class="desc">
+                "Crafting seamless web experiences with expert code artistry."
+              </p>
             </div>
-
-            <div aria-busy="true" class="loader">
-                <svg viewBox="0 0 80 80">
-                    <rect x="8" y="8" width="64" height="64"></rect>
-                </svg>
+            <div class="circle-button" id="about">
+              <img
+                class="arrow after"
+                src="assets/images/logos/arrow.svg"
+                alt="Scroll Arrow"
+              />
+              <img
+                class="arrow before"
+                src="assets/images/logos/arrow.svg"
+                alt="Scroll Arrow"
+              />
             </div>
-        </div>
-        <div aria-busy="true" class="cursor" style="display: block"></div>
-        <div class="container">
-            <section class="main-wrapper-1">
-                <section class="content-row content-row-1">
-                    <div class="card card-1">
-                        <div class="main-card">
-                            <h1 class="main">Hi, I'm Sanooj!</h1>
-                            <p class="desc">
-                                Full-stack developer from Kerala with experience
-                                in web (React, HTML, CSS). Comfortable with
-                                backend (Java, Python, JavaScript) and databases
-                                (MySQL, MongoDB). Utilizes version control
-                                (GitHub, GitLab).
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card card-2">
-                        <img
-                            src="assets/images/1.webp"
-                            alt="Project Thumbnail"
-                        />
-                    </div>
-                    <div class="card card-3">
-                        <img
-                            src="assets/images/2.webp"
-                            alt="Project Thumbnail"
-                        />
-                    </div>
-                </section>
-                <section class="content-row content-row-2">
-                    <div class="card card-4">
-                        <img
-                            src="assets/images/3.webp"
-                            alt="Project Thumbnail"
-                        />
-                    </div>
-                    <div class="card card-5">
-                        <div class="content">
-                            <p class="main">About</p>
-                            <p class="desc">
-                                "Crafting seamless web experiences with expert
-                                code artistry."
-                            </p>
-                        </div>
-                        <div class="circle-button" id="about">
-                            <img
-                                class="arrow after"
-                                src="assets/images/logos/arrow.svg"
-                                alt="Scroll Arrow"
-                            />
-                            <img
-                                class="arrow before"
-                                src="assets/images/logos/arrow.svg"
-                                alt="Scroll Arrow"
-                            />
-                        </div>
-                    </div>
-                    <section class="card about-card-3">
-                        <div class="content">
-                            <p class="main">Have a project in mind?</p>
-                            <div>
-                                <button class="copy-email-btn">
-                                    <span
-                                        >Copy Email<svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 256 256"
-                                            focusable="false"
-                                            style="
-                                                user-select: none;
-                                                width: 1rem;
-                                                height: 1rem;
-                                            "
-                                        >
-                                            <g weight="regular">
-                                                <path
-                                                    d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
-                                                ></path>
-                                            </g></svg
-                                    ></span>
-                                    <span>Copied !</span>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-
-                <section class="content-row content-row-3">
-                    <figure class="card card-7">
-                        <img
-                            src="https://github-readme-stats.vercel.app/api?username=sanoojes&show_icons=true&hide_border=true&disable_animations=true&bg_color=00000000"
-                            alt="Sanooj's GitHub stats"
-                        />
-                    </figure>
-                    <figure class="card card-6">
-                        <img
-                            src="https://lanyard.cnrad.dev/api/821653196161679371?theme=dark&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true&bg=00000000"
-                            alt="User Status Discord"
-                        />
-                    </figure>
-                    <div class="card card-12">
-                        <div class="toggle-switch" id="theme-switch">
-                            <label class="switch-label">
-                                <input type="checkbox" class="checkbox" />
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section class="main-wrapper-2">
-                <div class="card card-11">
-                    <div class="content">
-                        <p class="main">Projects</p>
-                        <p class="desc">Some of my projects</p>
-                    </div>
-                    <div class="circle-button" id="projects">
-                        <img
-                            class="arrow after"
-                            src="assets/images/logos/arrow.svg"
-                            alt="Scroll Arrow"
-                        />
-                        <img
-                            class="arrow before"
-                            src="assets/images/logos/arrow.svg"
-                            alt="Scroll Arrow"
-                        />
-                    </div>
-                </div>
-                <div class="card card-8">
-                    <p class="main">Stacks I use</p>
-                    <div class="scroller" data-speed="fast">
-                        <div class="scroller_inner sliding-logo-container">
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/linux.svg"
-                                alt="Linux Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/windows11.svg"
-                                alt="Windows 11 Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/github.svg"
-                                alt="GitHub Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/gitlab.svg"
-                                alt="GitLab Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/html5.svg"
-                                alt="HTML5 Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/css3.svg"
-                                alt="CSS3 Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/java.svg"
-                                alt="Java Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/javascript.svg"
-                                alt="JavaScript Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/python.svg"
-                                alt="Python Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/react.svg"
-                                alt="React Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/dart.svg"
-                                alt="Dart Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/nodejs.svg"
-                                alt="Node.js Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/mongodb.svg"
-                                alt="MongoDB Logo"
-                            />
-                            <img
-                                class="logo-set"
-                                src="assets/images/logos/mysql.svg"
-                                alt="MySQL Logo"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-13">
-                    <div class="card-logos">
-                        <a href="https://github.com/sanoojes">
-                            <img
-                                src="assets/images/logos/github.svg"
-                                alt="Sanooj's Github"
-                            />
-                        </a>
-                        <a href="https://instagram.com/sanooj.es">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/instagram.svg"
-                                alt="Sanooj's Instagram"
-                            />
-                        </a>
-                        <a href="https://t.me/sanoojes">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/telegram.svg"
-                                alt="Sanooj's Telegram"
-                            />
-                        </a>
-                        <a
-                            href="https://discordapp.com/users/821653196161679371"
-                        >
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/discord.svg"
-                                alt="Sanooj's Discord"
-                            />
-                        </a>
-                        <a
-                            href="https://open.spotify.com/user/31c4rwp3i4gumuyuilvb5ds3midm"
-                        >
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/spotify.svg"
-                                alt="Sanooj's Spotify"
-                            />
-                        </a>
-                        <a href="https://linkedin.com/in/sanoojes">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/linkedin.svg"
-                                alt="Sanooj's LinkedIn"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <aside
-            class="popup-wrapper"
-            id="popup-1"
-            role="dialog"
-            aria-labelledby="Projects"
-            aria-modal="true"
-        >
-            <header class="popup-button-container">
-                <!-- Accessible close button -->
-                <button class="popup-close-btn" aria-label="Close popup">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-x"
+          </div>
+          <section class="card about-card-3">
+            <div class="content">
+              <p class="main">Have a project in mind?</p>
+              <div>
+                <button class="copy-email-btn">
+                  <span
+                    >Copy Email<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      style="user-select: none; width: 1rem; height: 1rem"
                     >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
+                      <g weight="regular">
+                        <path
+                          d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
+                        ></path>
+                      </g></svg
+                  ></span>
+                  <span>Copied !</span>
                 </button>
-            </header>
-            <section class="popup-main">
-                <!-- Popup Content Rows -->
-                <div class="popup-content-row">
-                    <!-- Project Card 1 -->
-                    <article
-                        class="popup-card"
-                        onclick=" window.open('Gemini-Clone/', '_blank');"
-                    >
-                        <div class="popup-img-container">
-                            <img
-                                src="assets/images/project_1.webp"
-                                alt="Gemini Clone Project Preview"
-                                class="popup-card image"
-                            />
-                        </div>
-                        <div class="popup-text">
-                            <div class="text-container">
-                                <p class="popup-title">Google Gemini Clone</p>
-                                <p class="popup-desc">
-                                    This project is a clone of Google's Gemini
-                                    AI, crafted to replicate key features with a
-                                    responsive and efficient user interface.
-                                </p>
-                            </div>
-                            <div class="popup-tags">
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">Vite</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">ReactJs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Project Card 2 -->
-                    <article
-                        class="popup-card"
-                        onclick=" window.open('calculator-app/', '_blank');"
-                    >
-                        <div class="popup-img-container">
-                            <img
-                                src="assets/images/project_2.webp"
-                                alt="Simple Calculator App"
-                                class="popup-card image"
-                            />
-                        </div>
-                        <div class="popup-text">
-                            <div class="text-container">
-                                <p class="popup-title">Simple Calculator App</p>
-                                <p class="popup-desc">
-                                    This Simple Calculator app features a glass
-                                    morphism design.
-                                </p>
-                            </div>
-                            <div class="popup-tags">
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">HTML</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">CSS</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">JS</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="popup-content-row">
-                    <!-- Project Card 3 -->
-                    <article
-                        class="popup-card"
-                        onclick=" window.open('simple-timer/', '_blank');"
-                    >
-                        <div class="popup-img-container">
-                            <img
-                                src="assets/images/project_3.webp"
-                                alt="Simple Timer App"
-                                class="popup-card image"
-                            />
-                        </div>
-                        <div class="popup-text">
-                            <div class="text-container">
-                                <p class="popup-title">Simple Timer</p>
-                                <p class="popup-desc">
-                                    A Simple timer app with intuitive design,
-                                </p>
-                            </div>
-                            <div class="popup-tags">
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">HTML</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">CSS</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">JS</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Project Card 4 -->
-                    <article
-                        class="popup-card"
-                        onclick=" window.open('simple-todo-app/', '_blank');"
-                    >
-                        <div class="popup-img-container">
-                            <img
-                                src="assets/images/project_4.webp"
-                                alt="Simple Todo App"
-                                class="popup-card image"
-                            />
-                        </div>
-                        <div class="popup-text">
-                            <div class="text-container">
-                                <p class="popup-title">Simple ToDo App</p>
-                                <p class="popup-desc">
-                                    Efficient to-do app with clean interface,
-                                    built for productivity.
-                                </p>
-                            </div>
-                            <div class="popup-tags">
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">HTML</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">CSS</p>
-                                </div>
-                                <div class="popup-tag">
-                                    <p class="popup-tag-name">JS</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </aside>
+              </div>
+            </div>
+          </section>
+        </section>
 
-        <aside
-            class="popup-wrapper"
-            id="popup-2"
-            role="dialog"
-            aria-labelledby="About"
-            aria-modal="true"
-        >
-            <header class="popup-header">
-                <button class="popup-close-btn">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-x"
-                    >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
+        <section class="content-row content-row-3">
+          <figure class="card card-7">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=sanoojes&show_icons=true&hide_border=true&disable_animations=true&bg_color=00000000"
+              alt="Sanooj's GitHub stats"
+            />
+          </figure>
+          <figure class="card card-6">
+            <img
+              src="https://lanyard.cnrad.dev/api/821653196161679371?theme=dark&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true&bg=00000000"
+              alt="User Status Discord"
+            />
+          </figure>
+          <div class="card card-12">
+            <div class="toggle-switch" id="theme-switch">
+              <label class="switch-label">
+                <input type="checkbox" class="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="main-wrapper-2">
+        <div class="card card-11">
+          <div class="content">
+            <p class="main">Projects</p>
+            <p class="desc">Some of my projects</p>
+          </div>
+          <div class="circle-button" id="projects">
+            <img
+              class="arrow after"
+              src="assets/images/logos/arrow.svg"
+              alt="Scroll Arrow"
+            />
+            <img
+              class="arrow before"
+              src="assets/images/logos/arrow.svg"
+              alt="Scroll Arrow"
+            />
+          </div>
+        </div>
+        <div class="card card-8">
+          <p class="main">Stacks I use</p>
+          <div class="scroller" data-speed="fast">
+            <div class="scroller_inner sliding-logo-container">
+              <img
+                class="logo-set"
+                src="assets/images/logos/linux.svg"
+                alt="Linux Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/windows11.svg"
+                alt="Windows 11 Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/github.svg"
+                alt="GitHub Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/gitlab.svg"
+                alt="GitLab Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/html5.svg"
+                alt="HTML5 Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/css3.svg"
+                alt="CSS3 Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/java.svg"
+                alt="Java Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/javascript.svg"
+                alt="JavaScript Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/python.svg"
+                alt="Python Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/react.svg"
+                alt="React Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/dart.svg"
+                alt="Dart Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/nodejs.svg"
+                alt="Node.js Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/mongodb.svg"
+                alt="MongoDB Logo"
+              />
+              <img
+                class="logo-set"
+                src="assets/images/logos/mysql.svg"
+                alt="MySQL Logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card card-13">
+          <div class="card-logos">
+            <a href="https://github.com/sanoojes">
+              <img src="assets/images/logos/github.svg" alt="Sanooj's Github" />
+            </a>
+            <a href="https://instagram.com/sanooj.es">
+              <img
+                class="icon-set"
+                src="assets/images/logos/instagram.svg"
+                alt="Sanooj's Instagram"
+              />
+            </a>
+            <a href="https://t.me/sanoojes">
+              <img
+                class="icon-set"
+                src="assets/images/logos/telegram.svg"
+                alt="Sanooj's Telegram"
+              />
+            </a>
+            <a href="https://discordapp.com/users/821653196161679371">
+              <img
+                class="icon-set"
+                src="assets/images/logos/discord.svg"
+                alt="Sanooj's Discord"
+              />
+            </a>
+            <a
+              href="https://open.spotify.com/user/31c4rwp3i4gumuyuilvb5ds3midm"
+            >
+              <img
+                class="icon-set"
+                src="assets/images/logos/spotify.svg"
+                alt="Sanooj's Spotify"
+              />
+            </a>
+            <a href="https://linkedin.com/in/sanoojes">
+              <img
+                class="icon-set"
+                src="assets/images/logos/linkedin.svg"
+                alt="Sanooj's LinkedIn"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside
+      class="popup-wrapper"
+      id="popup-1"
+      role="dialog"
+      aria-labelledby="Projects"
+      aria-modal="true"
+    >
+      <header class="popup-button-container">
+        <!-- Accessible close button -->
+        <button class="popup-close-btn" aria-label="Close popup">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+      <section class="popup-main">
+        <!-- Popup Content Rows -->
+        <div class="popup-content-row">
+          <!-- Project Card 1 -->
+          <article
+            class="popup-card"
+            onclick=" window.open('Gemini-Clone/', '_blank');"
+          >
+            <div class="popup-img-container">
+              <img
+                src="assets/images/project_1.webp"
+                alt="Gemini Clone Project Preview"
+                class="popup-card image"
+              />
+            </div>
+            <div class="popup-text">
+              <div class="text-container">
+                <p class="popup-title">Google Gemini Clone</p>
+                <p class="popup-desc">
+                  This project is a clone of Google's Gemini AI, crafted to
+                  replicate key features with a responsive and efficient user
+                  interface.
+                </p>
+              </div>
+              <div class="popup-tags">
+                <div class="popup-tag">
+                  <p class="popup-tag-name">Vite</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">ReactJs</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Project Card 2 -->
+          <article
+            class="popup-card"
+            onclick=" window.open('calculator-app/', '_blank');"
+          >
+            <div class="popup-img-container">
+              <img
+                src="assets/images/project_2.webp"
+                alt="Simple Calculator App"
+                class="popup-card image"
+              />
+            </div>
+            <div class="popup-text">
+              <div class="text-container">
+                <p class="popup-title">Simple Calculator App</p>
+                <p class="popup-desc">
+                  This Simple Calculator app features a glass morphism design.
+                </p>
+              </div>
+              <div class="popup-tags">
+                <div class="popup-tag">
+                  <p class="popup-tag-name">HTML</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">CSS</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">JS</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="popup-content-row">
+          <!-- Project Card 3 -->
+          <article
+            class="popup-card"
+            onclick=" window.open('simple-timer/', '_blank');"
+          >
+            <div class="popup-img-container">
+              <img
+                src="assets/images/project_3.webp"
+                alt="Simple Timer App"
+                class="popup-card image"
+              />
+            </div>
+            <div class="popup-text">
+              <div class="text-container">
+                <p class="popup-title">Simple Timer</p>
+                <p class="popup-desc">
+                  A Simple timer app with intuitive design,
+                </p>
+              </div>
+              <div class="popup-tags">
+                <div class="popup-tag">
+                  <p class="popup-tag-name">HTML</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">CSS</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">JS</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Project Card 4 -->
+          <article
+            class="popup-card"
+            onclick=" window.open('simple-todo-app/', '_blank');"
+          >
+            <div class="popup-img-container">
+              <img
+                src="assets/images/project_4.webp"
+                alt="Simple Todo App"
+                class="popup-card image"
+              />
+            </div>
+            <div class="popup-text">
+              <div class="text-container">
+                <p class="popup-title">Simple ToDo App</p>
+                <p class="popup-desc">
+                  Efficient to-do app with clean interface, built for
+                  productivity.
+                </p>
+              </div>
+              <div class="popup-tags">
+                <div class="popup-tag">
+                  <p class="popup-tag-name">HTML</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">CSS</p>
+                </div>
+                <div class="popup-tag">
+                  <p class="popup-tag-name">JS</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </aside>
+
+    <aside
+      class="popup-wrapper"
+      id="popup-2"
+      role="dialog"
+      aria-labelledby="About"
+      aria-modal="true"
+    >
+      <header class="popup-header">
+        <button class="popup-close-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+      <section class="main-about">
+        <article class="about-container">
+          <section class="card about-card-1">
+            <header class="title">
+              <h1>What I'm about?</h1>
             </header>
-            <section class="main-about">
-                <article class="about-container">
-                    <section class="card about-card-1">
-                        <header class="title">
-                            <h1>What I'm about?</h1>
-                        </header>
-                        <div class="content">
-                            <p class="title-small">Full-Stack Expertise</p>
-                            <p class="desc">
-                                Based in Kerala, I am a Full-stack Developer
-                                with deep expertise in blending front-end
-                                technologies like React, HTML, CSS, and Tailwind
-                                with advanced back-end programming in Java,
-                                Python, JavaScript, and Dart. Adept in managing
-                                both SQL and NoSQL databases such as MySQL and
-                                MongoDB, I ensure data integrity and
-                                performance. I also leverage version control
-                                tools like GitHub and GitLab to maintain
-                                efficient workflows. My approach is
-                                detail-oriented, committed to developing
-                                maintainable, efficient code for complex,
-                                scalable web solutions.
-                            </p>
-                        </div>
-                    </section>
-                    <section class="card about-card-2">
-                        <header>
-                            <p
-                                class="title-small"
-                                style="text-transform: uppercase"
-                            >
-                                Experience
-                            </p>
-                        </header>
-                        <div class="content">
-                            <div class="content">
-                                <div class="text-wrapper">
-                                    <p class="title-small">HTML & CSS</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~4 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">GitHub</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~2 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">JavaScript</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~3 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">Java</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~3 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">Python</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~1.5 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">React</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~1 years</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">SQL & MongoDB</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~1 year</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">C++</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~1 year</p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="title-small">Dart</p>
-                                    <div class="line"></div>
-                                    <p class="desc">~1 year</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <figure class="card card-6">
-                        <img
-                            src="https://lanyard.cnrad.dev/api/821653196161679371?theme=dark&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true"
-                            alt="User Status Discord"
-                        />
-                    </figure>
-                </article>
-                <article class="about-container-1">
-                    <section class="card about-stacks">
-                        <header>
-                            <p class="title-small">Stacks I use</p>
-                        </header>
-                        <div class="scroller" data-speed="fast">
-                            <div
-                                class="scroller_inner sliding-logo-container"
-                                aria-busy="true"
-                            >
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/linux.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/windows11.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/github.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/gitlab.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/html5.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/css3.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/java.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/javascript.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/python.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/react.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/dart.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/nodejs.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/mongodb.svg"
-                                />
-                                <img
-                                    class="logo-set"
-                                    src="assets/images/logos/mysql.svg"
-                                />
-                            </div>
-                        </div>
-                    </section>
-                    <div class="wrapper">
-                        <i class="fas fa-arrow-left button" id="prev"></i>
-                        <div class="radio-container">
-                            <div class="radio-buttons"></div>
-                        </div>
-                        <div class="image-container">
-                            <div class="carousel">
-                                <img src="assets/images/1.webp" alt="Image 1" />
-                                <img src="assets/images/2.webp" alt="Image 2" />
-                                <img src="assets/images/3.webp" alt="Image 3" />
-                                <img src="assets/images/4.webp" alt="Image 4" />
-                            </div>
-                        </div>
-                        <i class="fas fa-arrow-right button" id="next"></i>
-                    </div>
-                    <section class="card about-card-3">
-                        <div class="content">
-                            <p class="main">Have a project in mind?</p>
-                            <div>
-                                <button class="copy-email-btn">
-                                    <span
-                                        >Copy Email<svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 256 256"
-                                            focusable="false"
-                                            style="
-                                                user-select: none;
-                                                width: 1rem;
-                                                height: 1rem;
-                                            "
-                                        >
-                                            <g weight="regular">
-                                                <path
-                                                    d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
-                                                ></path>
-                                            </g></svg
-                                    ></span>
-                                    <span>Copied !</span>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="card-logos-about">
-                        <a href="https://github.com/sanoojes">
-                            <img src="assets/images/logos/github.svg" />
-                        </a>
-                        <a href="https://instagram.com/sanooj.es">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/instagram.svg"
-                            />
-                        </a>
-                        <a href="https://t.me/sanoojes">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/telegram.svg"
-                            />
-                        </a>
-                        <a
-                            href="https://discordapp.com/users/821653196161679371"
-                        >
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/discord.svg"
-                            />
-                        </a>
-                        <a
-                            href="https://open.spotify.com/user/31c4rwp3i4gumuyuilvb5ds3midm"
-                        >
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/spotify.svg"
-                            />
-                        </a>
-                        <a href="https://linkedin.com/in/sanoojes">
-                            <img
-                                class="icon-set"
-                                src="assets/images/logos/linkedin.svg"
-                            />
-                        </a>
-                    </div>
-                </article>
-            </section>
-        </aside>
-        <script rel="preconnect" src="assets/script.js"></script>
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "Person",
-                "name": "Sanooj Es",
-                "jobTitle": "Full-stack Developer",
-                "affiliation": "Independent",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Kerala",
-                    "addressRegion": "IN"
-                },
-                "url": "https://sanooj.is-a.dev/",
-                "sameAs": [
-                    "https://github.com/sanoojes",
-                    "https://instagram.com/sanooj.es",
-                    "https://linkedin.com/in/sanoojes"
-                ]
-            }
-        </script>
-    </body>
+            <div class="content">
+              <p class="title-small">Full-Stack Expertise</p>
+              <p class="desc">
+                Based in Kerala, I am a Full-stack Developer with deep expertise
+                in blending front-end technologies like React, HTML, CSS, and
+                Tailwind with advanced back-end programming in Java, Python,
+                JavaScript, and Dart. Adept in managing both SQL and NoSQL
+                databases such as MySQL and MongoDB, I ensure data integrity and
+                performance. I also leverage version control tools like GitHub
+                and GitLab to maintain efficient workflows. My approach is
+                detail-oriented, committed to developing maintainable, efficient
+                code for complex, scalable web solutions.
+              </p>
+            </div>
+          </section>
+          <section class="card about-card-2">
+            <header>
+              <p class="title-small" style="text-transform: uppercase">
+                Experience
+              </p>
+            </header>
+            <div class="content">
+              <div class="content">
+                <div class="text-wrapper">
+                  <p class="title-small">HTML & CSS</p>
+                  <div class="line"></div>
+                  <p class="desc">~4 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">GitHub</p>
+                  <div class="line"></div>
+                  <p class="desc">~2 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">JavaScript</p>
+                  <div class="line"></div>
+                  <p class="desc">~3 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">Java</p>
+                  <div class="line"></div>
+                  <p class="desc">~3 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">Python</p>
+                  <div class="line"></div>
+                  <p class="desc">~1.5 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">React</p>
+                  <div class="line"></div>
+                  <p class="desc">~1 years</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">SQL & MongoDB</p>
+                  <div class="line"></div>
+                  <p class="desc">~1 year</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">C++</p>
+                  <div class="line"></div>
+                  <p class="desc">~1 year</p>
+                </div>
+                <div class="text-wrapper">
+                  <p class="title-small">Dart</p>
+                  <div class="line"></div>
+                  <p class="desc">~1 year</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <figure class="card card-6">
+            <img
+              src="https://lanyard.cnrad.dev/api/821653196161679371?theme=dark&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...&hideTimestamp=true&hideBadges=true"
+              alt="User Status Discord"
+            />
+          </figure>
+        </article>
+        <article class="about-container-1">
+          <section class="card about-stacks">
+            <header>
+              <p class="title-small">Stacks I use</p>
+            </header>
+            <div class="scroller" data-speed="fast">
+              <div
+                class="scroller_inner sliding-logo-container"
+                aria-busy="true"
+              >
+                <img class="logo-set" src="assets/images/logos/linux.svg" />
+                <img class="logo-set" src="assets/images/logos/windows11.svg" />
+                <img class="logo-set" src="assets/images/logos/github.svg" />
+                <img class="logo-set" src="assets/images/logos/gitlab.svg" />
+                <img class="logo-set" src="assets/images/logos/html5.svg" />
+                <img class="logo-set" src="assets/images/logos/css3.svg" />
+                <img class="logo-set" src="assets/images/logos/java.svg" />
+                <img
+                  class="logo-set"
+                  src="assets/images/logos/javascript.svg"
+                />
+                <img class="logo-set" src="assets/images/logos/python.svg" />
+                <img class="logo-set" src="assets/images/logos/react.svg" />
+                <img class="logo-set" src="assets/images/logos/dart.svg" />
+                <img class="logo-set" src="assets/images/logos/nodejs.svg" />
+                <img class="logo-set" src="assets/images/logos/mongodb.svg" />
+                <img class="logo-set" src="assets/images/logos/mysql.svg" />
+              </div>
+            </div>
+          </section>
+          <div class="wrapper">
+            <i class="fas fa-arrow-left button" id="prev"></i>
+            <div class="radio-container">
+              <div class="radio-buttons"></div>
+            </div>
+            <div class="image-container">
+              <div class="carousel">
+                <img src="assets/images/1.webp" alt="Image 1" />
+                <img src="assets/images/2.webp" alt="Image 2" />
+                <img src="assets/images/3.webp" alt="Image 3" />
+                <img src="assets/images/4.webp" alt="Image 4" />
+              </div>
+            </div>
+            <i class="fas fa-arrow-right button" id="next"></i>
+          </div>
+          <section class="card about-card-3">
+            <div class="content">
+              <p class="main">Have a project in mind?</p>
+              <div>
+                <button class="copy-email-btn">
+                  <span
+                    >Copy Email<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      style="user-select: none; width: 1rem; height: 1rem"
+                    >
+                      <g weight="regular">
+                        <path
+                          d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
+                        ></path>
+                      </g></svg
+                  ></span>
+                  <span>Copied !</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <div class="card-logos-about">
+            <a href="https://github.com/sanoojes">
+              <img src="assets/images/logos/github.svg" />
+            </a>
+            <a href="https://instagram.com/sanooj.es">
+              <img class="icon-set" src="assets/images/logos/instagram.svg" />
+            </a>
+            <a href="https://t.me/sanoojes">
+              <img class="icon-set" src="assets/images/logos/telegram.svg" />
+            </a>
+            <a href="https://discordapp.com/users/821653196161679371">
+              <img class="icon-set" src="assets/images/logos/discord.svg" />
+            </a>
+            <a
+              href="https://open.spotify.com/user/31c4rwp3i4gumuyuilvb5ds3midm"
+            >
+              <img class="icon-set" src="assets/images/logos/spotify.svg" />
+            </a>
+            <a href="https://linkedin.com/in/sanoojes">
+              <img class="icon-set" src="assets/images/logos/linkedin.svg" />
+            </a>
+          </div>
+        </article>
+      </section>
+    </aside>
+    <script rel="preconnect" src="assets/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Sanooj Es",
+        "jobTitle": "Full-stack Developer",
+        "affiliation": "Independent",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kerala",
+          "addressRegion": "IN"
+        },
+        "url": "https://sanooj.is-a.dev/",
+        "sameAs": [
+          "https://github.com/sanoojes",
+          "https://instagram.com/sanooj.es",
+          "https://linkedin.com/in/sanoojes"
+        ]
+      }
+    </script>
+  </body>
 </html>
