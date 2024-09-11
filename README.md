@@ -1,3 +1,9 @@
-## Sanoojes Personal Site
+## Sanooj's Personal Site 
 
-am poor in naming things so the code may seem difficult to understand
+Welcome! This is the source code for my personal website. 
+
+**A Work in Progress**
+
+I'm actively working on a new and improved version of my portfolio, so some of the code here is a bit messy. 😅 
+
+**Stay tuned for the big reveal soon!**
